@@ -72,7 +72,12 @@ class Pelicula {
     }
     return 'http://image.tmdb.org/t/p/w500/$posterPath';
   }
-
+getBackgroundImg(){
+    if(posterPath==null){
+      return 'https://imgclasificados3.emol.com/5627078_0/231/F124153274143194231138194133769681936231.jpg';
+    }
+    return 'http://image.tmdb.org/t/p/w500/$backdropPath';
+  }
 }
 
 
