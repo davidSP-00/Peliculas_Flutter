@@ -10,7 +10,7 @@ class PeliculasProvider{
 String _apikey='c1e057a048ef03ae1eaba4b2ccb74121';
 String _url='api.themoviedb.org';
 
-String _languaje='es';
+String _language='es';
 
 int _popularesPage=0;
 bool _cargando=false;
@@ -48,7 +48,7 @@ Future<List<Pelicula>> getEnCines() async{
   
   final url=Uri.https(_url ,'3/movie/now_playing',{
 'api_key': _apikey,
-'languaje':_languaje,
+'language':_language,
 
   });
   return await _procesarRespuesta(url);
@@ -63,7 +63,7 @@ _popularesPage++;
 
   final url=Uri.https(_url, '3/movie/popular',{
     'api_key':_apikey,
-    'languaje':_languaje,
+    'language':_language,
     'page':_popularesPage.toString()
   });
 
