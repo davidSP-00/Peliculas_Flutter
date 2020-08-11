@@ -2,6 +2,10 @@
 
 Proyecto hecho en Flutter
 
+## Descripcion
+
+Applicacion movil que consume API de peliculas , muestra las peliculas taquilleras y descripcion de cada una de ellas.
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
