@@ -14,6 +14,9 @@ Peliculas.fromJsonList(List<dynamic> jsonList ){
 }
 
 class Pelicula {
+
+  String uniqueId;
+  
   double popularity;
   int voteCount;
   bool video;

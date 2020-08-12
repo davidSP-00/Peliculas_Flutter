@@ -66,7 +66,7 @@ final Pelicula pelicula=ModalRoute.of(context).settings.arguments;
       padding: EdgeInsets.symmetric(horizontal: 20.0),
       child: Row(children: [
         Hero(
-          tag: pelicula.id,
+          tag: pelicula.uniqueId,
                   child: ClipRRect(
             borderRadius: BorderRadius.circular(20.0),
                     child: Image(image:NetworkImage(pelicula.getPosterImg()),
