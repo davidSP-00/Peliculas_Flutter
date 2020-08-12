@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_image/network.dart';
 import 'package:peliculas/src/models/actores_model.dart';
 import 'package:peliculas/src/models/pelicula_model.dart';
 import 'package:peliculas/src/providers/peliculas_provider.dart';
@@ -51,7 +52,8 @@ final Pelicula pelicula=ModalRoute.of(context).settings.arguments;
         title: Text(pelicula.title,
         style: TextStyle(color: Colors.white,fontSize: 16.0),),
         background: FadeInImage(
-          image:NetworkImage(pelicula.getBackgroundImg()),
+          image:NetworkImageWithRetry(pelicula.getBackgroundImg()
+          ),
           placeholder: AssetImage('assets/img/loading.gif'),
           fadeInDuration: Duration(milliseconds: 150),
           fit:BoxFit.cover
